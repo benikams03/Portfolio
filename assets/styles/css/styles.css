@@ -1,0 +1,14 @@
+@font-face {
+    font-family: jost;
+    src: url(./../../fonts/Jost-VariableFont_wght.ttf);
+}
+body{
+    font-family: jost;
+}
+
+.range-slider::-webkit-slider-thumb  {
+    appearance: none; 
+    background: transparent;
+    width: 0; height: 0;
+}
+
