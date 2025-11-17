@@ -18,7 +18,7 @@ export default function Head() {
                 </h3>
 
                 <div className="flex max-md:flex-col gap-2 mt-6 font-semibold w-full">
-                    <a href="#projects" className="flex items-center gap-2 w-full">
+                    <a href="#projets" className="flex items-center gap-2 w-full">
                         <Bouton className="w-full" outline>
                         Voir Mes Projets
                         <IoFolderOpenOutline /></Bouton>

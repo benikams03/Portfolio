@@ -25,7 +25,7 @@ export default function App() {
         <Certification />
         <Projet />
 
-        <footer className="px-4 md:px-34 py-12">
+        <footer id="Contact" className="px-4 md:px-34 py-12">
 
             <div className="grid grid-cols-1 md:grid-cols-3 ">
                 <div className="w-full flex items-center flex-col text-center md:border-r md:border-gray-300">
