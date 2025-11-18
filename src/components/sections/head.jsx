@@ -9,28 +9,28 @@ export default function Head() {
         <div className="h-full w-full max-md:px-6 px-68 flex gap-12 justify-between items-center">
 
             <div className="w-full flex flex-col items-center justify-center text-center">
-                <h2 className="text-lg text-gray-500 font-semibold max-md:text-sm">Bonjours, je m'appelle </h2>
-                <h1 className="text-5xl font-bold py-3 max-md:text-3xl"><span className="text-indigo-700">Beni Mukungulu</span><br />
+                <h2 data-aos="zoom-in" className="text-lg text-gray-500 font-semibold max-md:text-sm">Bonjours, je m'appelle </h2>
+                <h1 data-aos="zoom-in" className="text-5xl font-bold py-3 max-md:text-3xl"><span className="text-indigo-700">Beni Mukungulu</span><br />
                 Je suis Développeur full-stack Web & Mobile</h1>
-                <h3 className="text-lg text-gray-500 font-semibold max-md:text-sm">
+                <h3 data-aos="zoom-in" className="text-lg text-gray-500 font-semibold max-md:text-sm">
                     Je conçois des applications modernes, performantes et responsives. 
                     Mon objectif : développer des solutions digitales fiables et évolutives.
                 </h3>
 
                 <div className="flex max-md:flex-col gap-2 mt-6 font-semibold w-full">
-                    <a href="#projets" className="flex items-center gap-2 w-full">
+                    <a data-aos="fade-right" href="#projets" className="flex items-center gap-2 w-full">
                         <Bouton className="w-full" outline>
                         Voir Mes Projets
                         <IoFolderOpenOutline /></Bouton>
                     </a>
-                    <a href="#Contact" className="w-full flex items-center gap-2">
+                    <a data-aos="fade-left" href="#Contact" className="w-full flex items-center gap-2">
                         <Bouton className="w-full">
                         Contact
                         <RiCustomerService2Fill size={18} /></Bouton>
                     </a>
                 </div>
                 
-                <aside className="pt-8 flex gap-2 text-gray-800">
+                <aside data-aos="zoom-in" className="pt-8 flex gap-2 text-gray-800">
                     <a href="https://facebook.com/Beni.kams03" target="_blank"
                         className="text-3xl px-2 ">
                         <FaFacebookF />

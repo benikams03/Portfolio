@@ -9,10 +9,19 @@ import { CiMap } from "react-icons/ci";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
 
+import { useEffect } from "react"
+import Aos from "aos"
+
 export default function App() {
 
     const date = new Date()
-
+        useEffect(() => {
+        Aos.init({
+        duration: 1000, 
+        once: false,    
+        });
+    }, []);
+    
     return(<>
         <Layout />
         

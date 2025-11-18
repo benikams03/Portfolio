@@ -7,10 +7,10 @@ import { BsFiletypePhp } from "react-icons/bs";
 export default function Skils() {
     return(<>
     <div id="skill" className="relative bg-white px-6 md:px-36 max-md:pb-12">
-        <h2 className="text-center pt-12 pb-10 text-3xl font-bold">SKILLS</h2>
+        <h2 data-aos="zoom-in" className="text-center pt-12 pb-10 text-3xl font-bold">SKILLS</h2>
         
         <div className="pb-26 grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="border-l-1 border-gray-300 px-6 relative">
+            <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">
                 <div className="border-l h-8 border-indigo-600 absolute left-0" />
                 <h2 className="text-xl font-semibold pb-5">Language <span className="text-indigo-600">de programmtion</span></h2>
                 <div className="text-gray-700 flex flex-col gap-2">
@@ -28,7 +28,7 @@ export default function Skils() {
                         Python</p>
                 </div>
             </div>
-            <div className="border-l-1 border-gray-300 px-6 relative">
+            <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">
                 <div className="border-l h-8 border-indigo-600 absolute left-0" />
                 <h2 className="text-xl font-semibold pb-5">Microframework <span className="text-indigo-600">& Librairie</span></h2>
                 <div className="text-gray-700 flex flex-col gap-2">
@@ -49,7 +49,7 @@ export default function Skils() {
                         Slim</p>
                 </div>
             </div>
-            <div className="border-l-1 border-gray-300 px-6 relative">
+            <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">
                 <div className="border-l h-8 border-indigo-600 absolute left-0" />
                 <h2 className="text-xl font-semibold pb-5">Frame<span className="text-indigo-600">work</span></h2>
                 <div className="text-gray-700 flex flex-col gap-2">
@@ -64,7 +64,7 @@ export default function Skils() {
                         React Native</p>
                 </div>
             </div>
-            <div className="border-l-1 border-gray-300 px-6 relative">
+            <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">
                 <div className="border-l h-8 border-indigo-600 absolute left-0" />
                 <h2 className="text-xl font-semibold pb-5">Technologies <span className="text-indigo-600">Web</span></h2>
                 <div className="text-gray-700 flex flex-col gap-2">
@@ -79,7 +79,7 @@ export default function Skils() {
                         TailwindCSS</p>
                 </div>
             </div>
-            <div className="border-l-1 border-gray-300 px-6 relative">
+            <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">
                 <div className="border-l h-8 border-indigo-600 absolute left-0" />
                 <h2 className="text-xl font-semibold pb-5">Base <span className="text-indigo-600">de données</span></h2>
                 <div className="text-gray-700 flex flex-col gap-2">
@@ -91,7 +91,7 @@ export default function Skils() {
                         MongoDB</p>
                 </div>
             </div>
-            <div className="border-l-1 border-gray-300 px-6 relative">
+            <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">
                 <div className="border-l h-8 border-indigo-600 absolute left-0" />
                 <h2 className="text-xl font-semibold pb-5">CMS & Outils <span className="text-indigo-600">de Versioning</span></h2>
                 <div className="text-gray-700 flex flex-col gap-2">
@@ -106,7 +106,7 @@ export default function Skils() {
                         GitHub</p>
                 </div>
             </div>
-            <div className="border-l-1 border-gray-300 px-6 relative">
+            <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">
                 <div className="border-l h-8 border-indigo-600 absolute left-0" />
                 <h2 className="text-xl font-semibold pb-5">De<span className="text-indigo-600">sign</span></h2>
                 <div className="text-gray-700 flex flex-col gap-2">

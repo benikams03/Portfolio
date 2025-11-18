@@ -4,7 +4,7 @@ import { FiDownload } from "react-icons/fi";
 
 export default function Card_projet({ img, titre, text, type, link  }){
     return(<>
-    <div className="border border-gray-400/50 w-full p-2 rounded-lg" >
+    <div data-aos="fade-up" className="border border-gray-400/50 w-full p-2 rounded-lg" >
         <img src={img} className="rounded-sm w-full" />
         <div>
             <p className="text-sm py-2">

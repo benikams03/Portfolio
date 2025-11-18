@@ -13,21 +13,21 @@ const dataCertification = [
 
 const dataprojet = [
     {
-        image : '/public/image-project/tokutan.png',
+        image : '/image-project/tokutan.png',
         titre : 'Tokutana',
         text : "Découvrez notre plateforme complète de gestion d'événements : créez, organisez et gérez facilement tous vos événements professionnels ou personnels en ligne. Simplifiez votre planification avec des outils efficaces et intuitifs",
         type : 'web',
         link : 'https://tokutana.vercel.app/'
     },
     // {
-    //     image : '/public/image-project/apk_tokutana.png',
+    //     image : '/image-project/apk_tokutana.png',
     //     titre : 'Tokutana',
     //     text : "Application de gestion d'événements, la version mobile du site tokutana",
     //     type : 'mobile',
     //     link : ''
     // },
     {
-        image : '/public/image-project/drcskyangecy.png',
+        image : '/image-project/drcskyangecy.png',
         titre : 'Drc-sky-agency',
         text : "Partez à la découverte d’un tourisme responsable avec nos guides éthiques, destinations écoresponsables et conseils pour voyager autrement.",
         type : 'web',
