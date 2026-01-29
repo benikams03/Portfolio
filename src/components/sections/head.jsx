@@ -11,7 +11,7 @@ export default function Head() {
             <div className="w-full flex flex-col items-center justify-center text-center">
                 <h2 data-aos="zoom-in" className="text-lg text-gray-500 font-semibold max-md:text-sm">Bonjours, je m'appelle </h2>
                 <h1 data-aos="zoom-in" className="text-5xl font-bold py-3 max-md:text-3xl"><span className="text-indigo-700">Beni Mukungulu</span><br />
-                Je suis Développeur full-stack Web & Mobile</h1>
+                Je suis Développeur full-stack Web, Mobile & Desktop</h1>
                 <h3 data-aos="zoom-in" className="text-lg text-gray-500 font-semibold max-md:text-sm">
                     Je conçois des applications modernes, performantes et responsives. 
                     Mon objectif : développer des solutions digitales fiables et évolutives.

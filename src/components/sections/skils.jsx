@@ -62,6 +62,9 @@ export default function Skils() {
                     <p className="flex items-center gap-2 font-semibold">
                         <FaReact size={28}/>
                         React Native</p>
+                    <p className="flex items-center gap-2 font-semibold">
+                        <FaReact size={28}/>
+                        Electron</p>
                 </div>
             </div>
             <div data-aos="fade-up" className="border-l-1 border-gray-300 px-6 relative">

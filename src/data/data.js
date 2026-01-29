@@ -15,7 +15,7 @@ const dataprojet = [
     {
         image : '/image-project/tokutan.png',
         titre : 'Tokutana',
-        text : "Découvrez notre plateforme complète de gestion d'événements : créez, organisez et gérez facilement tous vos événements professionnels ou personnels en ligne. Simplifiez votre planification avec des outils efficaces et intuitifs",
+        text : "Découvrez notre plateforme complète de gestion d'événements : créez, organisez et gérez facilement tous vos événements professionnels ou personnels en ligne.",
         type : 'web',
         link : 'https://tokutana.vercel.app/'
     },
@@ -32,6 +32,13 @@ const dataprojet = [
         text : "Partez à la découverte d’un tourisme responsable avec nos guides éthiques, destinations écoresponsables et conseils pour voyager autrement.",
         type : 'web',
         link : 'https://drc-sky-agency.vercel.app/'
+    },
+    {
+        image : '/image-project/batelapharma.png',
+        titre : 'Batelapharma',
+        text : "Une application desktop pour la gestion d'une pharmacie, avec deux interface un du coter caissier et l'autre du coter administrateur.",
+        // type : 'mobile',
+        // link : ''
     },
 ]
 
