@@ -16,8 +16,8 @@ const dataprojet = [
         image : '/image-project/bongisakisi.png',
         titre : 'Bongisakisi',
         text : "Application desktop offline complète pour gérer votre pharmacie : stocks, ventes, produits et rapports. Interface intuitive conçue pour les pharmaciens.",
+        type : 'web',
         link : 'https://bongisakisi.vercel.app/',
-        // type : 'mobile',
     },
     {
         image : '/image-project/drcskyangecy.png',
