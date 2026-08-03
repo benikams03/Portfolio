@@ -1,7 +1,7 @@
 import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaHtml5, FaCss3Alt,FaPython, FaReact, FaNodeJs,FaLaravel,FaVuejs, FaWordpress, FaGithub, FaGitAlt  } from "react-icons/fa6";
-import { SiMongodb, SiPhp, SiFastify, SiExpress, SiMysql,SiAdobephotoshop,SiAdobexd,SiAdobeillustrator } from "react-icons/si";
+import { SiMongodb, SiPhp, SiFastify, SiExpress, SiMysql,SiAdobephotoshop,SiAdobexd,SiAdobeillustrator,SiNextdotjs } from "react-icons/si";
 import { BsFiletypePhp } from "react-icons/bs";
 
 export default function Skils() {
@@ -59,6 +59,9 @@ export default function Skils() {
                     <p className="flex items-center gap-2 font-semibold">
                         <FaVuejs size={28}/>
                         Vuejs</p>
+                    <p className="flex items-center gap-2 font-semibold">
+                        <SiNextdotjs size={28}/>
+                        Nextjs</p>
                     <p className="flex items-center gap-2 font-semibold">
                         <FaReact size={28}/>
                         React Native</p>
