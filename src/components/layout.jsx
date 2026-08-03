@@ -23,7 +23,7 @@ const Layout = () => {
             </nav>
             
             
-            <a href="./../assets/files/CV_beni_mukungulu.pdf"
+            <a href="/public/CV_beni_mukungulu.pdf"
                 download="cv_beni_mukungulu.pdf"
                 className="flex gap-2">
                 <Bouton>
