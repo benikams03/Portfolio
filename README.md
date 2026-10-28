@@ -1,16 +1,27 @@
-# React + Vite
+# DevKams — Portfolio de Beni Mukungulu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio React + Vite, adapté aux ordinateurs, tablettes et mobiles.
 
-Currently, two official plugins are available:
+## Développement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```sh
+npm install
+npm run dev
+npm run build
+```
 
-## React Compiler
+## Modifier le contenu
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Le fichier `src/data/data.js` centralise les projets, la formation, les compétences, les expériences et le certificat de démonstration.
 
-## Expanding the ESLint configuration
+- `dataprojet` : titre, description, capture et lien de chaque projet.
+- `dataCertification` : parcours académique. Ajouter les PDF dans `public/diplomes/`, puis renseigner `documentUrl` (ex. `/diplomes/licence.pdf`) pour activer leur consultation. Tant que ce champ est `null`, le bouton « Voir le diplôme » affiche que le document sera ajouté prochainement.
+- `skillGroups` : compétences regroupées par domaine.
+- `experiences` : entreprise (`company`), poste (`role`), période (`period`), durée (`duration`), missions (`description`) et compétences (`skills`). Dupliquer l’objet pour ajouter une expérience et utiliser un `id` unique. L’entrée actuelle est illustrative : remplacer ses informations avant publication.
+- `certificates` : titre, organisme et année du certificat. Les deux entrées actuelles sont des démonstrations graphiques clairement signalées, et ne représentent pas des certifications obtenues. Chaque bouton ouvre l’aperçu du certificat sélectionné. Pour intégrer un vrai document, remplacer aussi l’aperçu et le contenu du dialogue dans `src/App.jsx`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+La nouvelle photo est importée dans `src/App.jsx` depuis `src/assets/photos/Sans titre-1.jpg`. Le CV téléchargeable se trouve dans `public/CV_beni_mukungulu.pdf`.
+
+## Design et accessibilité
+
+Les styles et les adaptations aux différentes tailles d’écran sont dans `src/assets/styles/app.css`. Les apparitions au défilement utilisent IntersectionObserver, sans dépendance supplémentaire. Les préférences de réduction des animations sont respectées. Le certificat peut être fermé avec Échap et le dialogue gère le focus clavier.
