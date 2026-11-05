@@ -43,7 +43,7 @@ export default function App() {
     }, [selectedDocument])
 
     return <>
-        <a className="fixed top-[-80px] left-3 z-[100] bg-mint p-3 focus:top-3" href="#main">Aller au contenu</a>
+        <a className="fixed top-[-80px] left-3 z-[100] bg-accent p-3 focus:top-3" href="#main">Aller au contenu</a>
 
         <Top active={active} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
@@ -60,7 +60,7 @@ export default function App() {
 
         <dialog
             ref={dialog}
-            className="fixed inset-0 m-auto max-h-[90dvh] w-[min(620px,calc(100%_-_32px))] overflow-auto rounded-lg border-0 bg-[#f9faf2] p-[25px] shadow-[0_30px_100px_#0005] backdrop:bg-[#0c232bd9] backdrop:backdrop-blur-[6px] max-[600px]:p-4"
+            className="fixed inset-0 m-auto max-h-[90dvh] w-[min(620px,calc(100%_-_32px))] overflow-auto rounded-lg border-0 bg-[#fafafa] p-[25px] shadow-[0_30px_100px_#0005] backdrop:bg-[#000000d9] backdrop:backdrop-blur-[6px] max-[600px]:p-4"
             aria-labelledby="document-title"
             onCancel={() => setSelectedDocument(null)}
             onClose={() => setSelectedDocument(null)}
@@ -68,25 +68,25 @@ export default function App() {
         >
             <button autoFocus className="absolute top-3 right-3 z-10 grid h-8 w-8 place-items-center rounded-full bg-ink text-white" onClick={() => setSelectedDocument(null)} aria-label="Fermer l’aperçu"><FiX /></button>
             {selectedDocument?.type === 'diploma'
-                ? <div className="border-4 border-double border-[#9aaf91] px-[25px] py-[45px] text-center max-[600px]:px-[15px] max-[600px]:py-[35px]">
+                ? <div className="border-4 border-double border-[#b97f56] px-[25px] py-[45px] text-center max-[600px]:px-[15px] max-[600px]:py-[35px]">
                     <p className="flex items-center justify-center gap-2.5 text-[8px] leading-[1.6] font-[650] tracking-[2px]">PARCOURS ACADÉMIQUE</p>
-                    <FiAward className="mx-auto my-[25px] text-[55px] text-[#6b8c5e]" />
+                    <FiAward className="mx-auto my-[25px] text-[55px] text-[#d9653b]" />
                     <h2 id="document-title" className="mb-[25px] font-serif text-[38px] leading-[1.15] max-[600px]:text-[30px]">{selectedDocument.title}</h2>
                     <p className="text-[13px] text-muted">{selectedDocument.description}</p>
                     <h3 className="my-3.5 font-serif text-[29px] max-[600px]:text-[25px]">{selectedDocument.year}</h3>
-                    <div className="mx-auto my-3.5 h-px w-[50px] bg-[#92a381]" />
+                    <div className="mx-auto my-3.5 h-px w-[50px] bg-[#d9d9d9]" />
                     <p className="text-[13px] text-muted">Le document de ce diplôme sera ajouté prochainement.</p>
-                    <small className="mt-[18px] block text-[10px] leading-[1.6] text-[#677961]">Le fichier original n’est pas encore disponible dans le portfolio.</small>
+                    <small className="mt-[18px] block text-[10px] leading-[1.6] text-[#6b6b6b]">Le fichier original n’est pas encore disponible dans le portfolio.</small>
                 </div>
-                : <div className="border-4 border-double border-[#9aaf91] px-[25px] py-[45px] text-center max-[600px]:px-[15px] max-[600px]:py-[35px]">
+                : <div className="border-4 border-double border-[#b97f56] px-[25px] py-[45px] text-center max-[600px]:px-[15px] max-[600px]:py-[35px]">
                     <p className="flex items-center justify-center gap-2.5 text-[8px] leading-[1.6] font-[650] tracking-[2px]">DEVKAMS · MODÈLE DE PRÉSENTATION</p>
-                    <FiAward className="mx-auto my-[25px] text-[55px] text-[#6b8c5e]" />
+                    <FiAward className="mx-auto my-[25px] text-[55px] text-[#d9653b]" />
                     <h2 id="document-title" className="mb-[25px] font-serif text-[38px] leading-[1.15] max-[600px]:text-[30px]">Certificat<br />de démonstration</h2>
                     <p className="text-[13px] text-muted">Exemple visuel pour le portfolio de</p>
                     <h3 className="my-3.5 font-serif text-[29px] max-[600px]:text-[25px]">Beni Mukungulu</h3>
                     <p className="text-[13px] text-muted">{selectedDocument?.title}</p>
-                    <div className="mx-auto my-3.5 h-px w-[50px] bg-[#92a381]" />
-                    <small className="block text-[10px] leading-[1.6] text-[#677961]">Ce document est un aperçu de design et ne constitue pas une certification réelle.</small>
+                    <div className="mx-auto my-3.5 h-px w-[50px] bg-[#d9d9d9]" />
+                    <small className="block text-[10px] leading-[1.6] text-[#6b6b6b]">Ce document est un aperçu de design et ne constitue pas une certification réelle.</small>
                 </div>}
         </dialog>
     </>

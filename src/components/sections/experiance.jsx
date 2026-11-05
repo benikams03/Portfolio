@@ -4,7 +4,7 @@ import { experiences } from '../../data/data.js'
 
 const container = 'mx-auto w-[min(1200px,calc(100%_-_96px))] max-[1100px]:w-[calc(100%_-_64px)] max-[800px]:w-[calc(100%_-_40px)]'
 const section = 'bg-paper py-[112px] max-[800px]:py-[75px] max-[600px]:py-[62px]'
-const tag = 'rounded border border-[#d7dfd7] bg-[#ffffff45] px-2.5 py-1.5 text-[11px] text-[#586b63] max-[600px]:px-[7px] max-[600px]:py-[5px] max-[600px]:text-[10px]'
+const tag = 'rounded border border-[#e8e8e6] bg-[#ffffff45] px-2.5 py-1.5 text-[11px] text-[#6b6b6b] max-[600px]:px-[7px] max-[600px]:py-[5px] max-[600px]:text-[10px]'
 
 export default function Experiance() {
     return (
@@ -25,15 +25,15 @@ export default function Experiance() {
                             data-reveal
                         >
                             <div className="max-[600px]:col-start-2">
-                                <span className="inline-block rounded border border-[#ccd9cd] px-2 py-1 text-[10px] leading-[1.4] text-[#61776a]">Exemple de présentation</span>
+                                <span className="inline-block rounded border border-[#e8e8e6] px-2 py-1 text-[10px] leading-[1.4] text-[#6b6b6b]">Exemple de présentation</span>
                                 <p className="mt-[19px] text-[15px] max-[600px]:mt-3 max-[600px]:text-sm">{experience.period}</p>
                                 <span className="text-xs text-muted">{experience.duration}</span>
                             </div>
-                            <div className="grid h-11 w-11 place-items-center rounded-full border border-[#cedace] bg-[#edf3e9] text-[#5b8066] max-[600px]:col-start-1 max-[600px]:row-span-2 max-[600px]:row-start-1 max-[600px]:h-[35px] max-[600px]:w-[35px] max-[600px]:text-[15px]">
+                            <div className="grid h-11 w-11 place-items-center rounded-full border border-[#e5e0da] bg-[#f3ece7] text-[#b4552d] max-[600px]:col-start-1 max-[600px]:row-span-2 max-[600px]:row-start-1 max-[600px]:h-[35px] max-[600px]:w-[35px] max-[600px]:text-[15px]">
                                 <FiBriefcase />
                             </div>
                             <div className="max-[600px]:col-start-2">
-                                <p className="mb-[7px] text-xs text-[#5c7865]">{experience.company}</p>
+                                <p className="mb-[7px] text-xs text-[#6b6b6b]">{experience.company}</p>
                                 <h3 className="text-[25px] font-[550] tracking-[-0.5px] max-[600px]:text-[22px]">{experience.role}</h3>
                                 <p className="mt-[14px] mb-5 max-w-[620px] text-sm leading-[1.9] text-muted max-[600px]:text-[13px]">{experience.description}</p>
                                 <div className="flex flex-wrap gap-[7px] max-[600px]:gap-[5px]">

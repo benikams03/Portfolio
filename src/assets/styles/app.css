@@ -9,17 +9,17 @@
 @theme {
     --font-sans: ElmsSans, Arial, sans-serif;
 
-    --color-ink: #11252b;
-    --color-coal: #182e33;
-    --color-paper: #f7f8f4;
-    --color-mist: #edf1eb;
-    --color-sage: #eaf0e9;
-    --color-night: #0e2025;
-    --color-mint: #bcf3cb;
-    --color-mintlight: #d5ffdf;
-    --color-muted: #647176;
-    --color-line: #dbe1db;
-    --color-focus: #4ca67a;
+    --color-ink: #151515;
+    --color-coal: #151515;
+    --color-paper: #faf9f7;
+    --color-mist: #f4f2ee;
+    --color-sage: #efece6;
+    --color-night: #0c0c0d;
+    --color-accent: #d9653b;
+    --color-accentlight: #e8805a;
+    --color-muted: #6b6b6b;
+    --color-line: #e8e8e6;
+    --color-focus: #d9653b;
 
     --animate-float: float 7s ease-in-out infinite;
     --animate-nudge: nudge 2.5s ease-in-out infinite;
@@ -35,7 +35,7 @@
 }
 
 ::selection {
-    background: var(--color-mint);
+    background: var(--color-accent);
     color: var(--color-ink);
 }
 

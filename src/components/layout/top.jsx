@@ -11,12 +11,12 @@ const container = 'mx-auto w-[min(1200px,calc(100%_-_96px))] max-[1100px]:w-[cal
 
 export default function Top({ active, menuOpen, setMenuOpen }) {
     return (
-        <header className="fixed inset-x-0 top-0 z-30 border-b border-[#ffffff14] bg-ink/95 text-[#f5f8f2] backdrop-blur-[18px]">
+        <header className="fixed inset-x-0 top-0 z-30 border-b border-[#ffffff14] bg-ink/95 text-[#fafafa] backdrop-blur-[18px]">
             <div className={`${container} flex h-[86px] max-[800px]:h-[72px] items-center justify-between gap-8`}>
                 <a href="#accueil" className="text-[28px] font-[780] tracking-[-1.3px] whitespace-nowrap" aria-label="DevKams — accueil">
                     <span className="font-[430]">dev</span>
                     <span className="font-[430]">kams</span>
-                    <i className="not-italic text-mint">.</i>
+                    <i className="not-italic text-accent">.</i>
                 </a>
 
                 <nav
@@ -33,7 +33,7 @@ export default function Top({ active, menuOpen, setMenuOpen }) {
                             href={`#${id}`}
                             aria-current={active === id ? 'location' : undefined}
                             onClick={() => setMenuOpen(false)}
-                            className={`transition-colors duration-200 hover:text-mint max-[800px]:text-[15px] ${active === id ? 'text-mint' : ''}`}
+                            className={`transition-colors duration-200 hover:text-accent max-[800px]:text-[15px] ${active === id ? 'text-accent' : ''}`}
                         >
                             {label}
                         </a>
