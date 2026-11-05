@@ -17,16 +17,30 @@ const dataprojet = [
         image: '/image-project/tokutan.png',
         titre: 'Tokutana',
         text: "Découvrez notre plateforme complète de gestion d'événements : créez, organisez et gérez facilement tous vos événements professionnels ou personnels en ligne.",
-        type: 'mobile',
+        type: 'web',
         link: 'https://tokutana.vercel.app/',
     },
     // {
-    //     image : '/image-project/apk_tokutana.png',
-    //     titre : 'Tokutana',
-    //     text : "Application de gestion d'événements, la version mobile du site tokutana",
-    //     type : 'mobile',
-    //     link : ''
+    //     image: '',
+    //     titre: '',
+    //     text: "",
+    //     type: 'mobile',
+    //     download: {
+    //         android: '',
+    //         ios: ''
+    //     },
     // },
+    // {
+    //     image: '',
+    //     titre: '',
+    //     text: "",
+    //     type: 'desktop',
+    //     download: {
+    //         windows: '',
+    //         mac: '',
+    //         linux: ''
+    //     },
+    // }
 ]
 
 export { dataprojet }
