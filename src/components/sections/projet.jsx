@@ -1,24 +1,35 @@
-import Card_projet from "../card-projet.jsx"
-import { dataprojet } from "../../data/data.js"
+import { FiArrowUpRight } from 'react-icons/fi'
+import SectionTitle from './section-title.jsx'
+import { dataprojet } from '../../data/data.js'
 
 export default function Projet() {
-    return(<>
-    <div id="projets" className="bg-white px-4 md:px-36 py-16">
-        
-        <h2 data-aos="zoom-in" className="text-center pb-6 text-3xl font-bold text-center">MES <spanc className="text-indigo-600">PROJETS</spanc></h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            { dataprojet.map((value, index) => (
-                <Card_projet key={index}
-                    img={value.image}
-                    titre={value.titre}
-                    text={value.text}
-                    type={value.type}
-                    link={value.link}
-                    />
-            ))  }
-        </div>
-
-    </div>
-    </>)
+    return (
+        <section id="projets" className="section projects-section">
+            <div className="container">
+                <SectionTitle
+                    number="04"
+                    label="SÉLECTION DE PROJETS"
+                    title={<>Du code, mais surtout<br />des projets concrets.</>}
+                >
+                    Gestion, tourisme, événementiel : quelques réalisations qui donnent forme à mon travail.
+                </SectionTitle>
+                <div className="project-grid">
+                    {dataprojet.map((project, index) => (
+                        <article className="project-card" key={project.titre} data-reveal>
+                            <a className="project-image" href={project.link} target="_blank" rel="noreferrer" aria-label={`Découvrir ${project.titre} (nouvel onglet)`}>
+                                <img src={project.image} alt={`Aperçu du projet ${project.titre}`} loading="lazy" />
+                                <span className="project-open"><FiArrowUpRight /></span>
+                            </a>
+                            <div className="project-meta">
+                                <span>0{index + 1} / {index === 0 ? 'APPLICATION MÉTIER' : 'APPLICATION WEB'}</span>
+                                <span>↗</span>
+                            </div>
+                            <h3><a href={project.link} target="_blank" rel="noreferrer">{project.titre}</a></h3>
+                            <p>{project.text}</p>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
 }

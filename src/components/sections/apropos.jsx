@@ -1,23 +1,43 @@
-import img from "./../../assets/photos/img-programmeur.jpg"
+import { FiArrowUpRight, FiCode, FiSmartphone, FiLayers } from 'react-icons/fi'
+import SectionTitle from './section-title.jsx'
+import Skills from './skils.jsx'
 
 export default function Apropos() {
-    return(<>
-    <div id="apropos" className="bg-white flex gap-8 md:justify-between items-start max-md:flex-col px-4 md:px-36 py-20 max-md:pb-20">
-        <div data-aos="fade-up" className="w-full">
-            <img src={img} className="w-full rounded-xl" loading="lazy" />
-        </div>
-        <div className="w-full">
-            <h2 data-aos="zoom-in" className="text-3xl font-bold">APROPOS <span className="text-indigo-600">DE MOI</span></h2>
-            <p data-aos="fade-up" className="text-gray-600 mt-4">
-                Je suis développeur web et mobile basé à Kinshasa, République Démocratique du Congo.
-                Je crée des applications modernes, rapides et faciles à utiliser, en utilisant des technologies comme React, React Native, Node.js, TypeScript, Laravel, Slim. <br />
-
-                Je travaille sur des projets du début à la fin, de la conception jusqu’au déploiement.
-                Je suis passionné par la technologie, toujours prêt à apprendre de nouvelles choses et à relever des défis. <br />
-
-                Avec mon expérience, mes projets réalisés et mes certifications, je suis prêt à contribuer à des solutions utiles et efficaces.
-            </p>
-        </div>
-    </div>
-    </>)
+    return (
+        <section id="apropos" className="section about-section">
+            <div className="container">
+                <SectionTitle
+                    number="01"
+                    label="À PROPOS"
+                    title={<>La technique au service<br />de vos idées.</>}
+                >
+                    Une approche complète du développement, avec la même attention portée au code et à l’expérience utilisateur.
+                </SectionTitle>
+                <div className="about-grid">
+                    <div className="about-copy" data-reveal>
+                        <p>Basé à <strong>Kinshasa, en République démocratique du Congo</strong>, je conçois des applications modernes, rapides et faciles à utiliser.</p>
+                        <p>De la conception au déploiement, j’aime comprendre un besoin, structurer une solution et lui donner vie. React, React Native, Node.js, TypeScript ou Laravel : je choisis les outils adaptés à chaque projet.</p>
+                        <a className="text-link dark-link" href="#Contact">Faisons connaissance <FiArrowUpRight /></a>
+                    </div>
+                    <div className="services">
+                        {[
+                            [FiCode, 'Développement web', 'Des interfaces responsives et des applications pensées pour leurs utilisateurs.'],
+                            [FiSmartphone, 'Applications mobiles', 'Des expériences accessibles sur mobile avec React Native.'],
+                            [FiLayers, 'Solutions desktop', 'Des outils métier concrets pour simplifier le travail au quotidien.'],
+                        ].map(([Icon, title, text]) => (
+                            <article className="service-row" key={title} data-reveal>
+                                <Icon />
+                                <div>
+                                    <h3>{title}</h3>
+                                    <p>{text}</p>
+                                </div>
+                                <FiArrowUpRight />
+                            </article>
+                        ))}
+                    </div>
+                </div>
+                <Skills />
+            </div>
+        </section>
+    )
 }
