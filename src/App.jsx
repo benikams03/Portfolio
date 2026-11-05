@@ -1,62 +1,47 @@
-import Layout from "./components/layout.jsx"
-import Head from "./components/sections/head.jsx"
-import Apropos from "./components/sections/apropos.jsx"
-import Certification from "./components/sections/certification.jsx"
-import Skils from "./components/sections/skils.jsx"
-import Projet from "./components/sections/projet.jsx"
-
-import { CiMap } from "react-icons/ci";
-import { IoPhonePortraitOutline } from "react-icons/io5";
-import { MdMailOutline } from "react-icons/md";
-
-import { useEffect } from "react"
-import Aos from "aos"
+import { useEffect, useState } from 'react'
+import Top from './components/layout/top.jsx'
+import Head from './components/sections/head.jsx'
+import Apropos from './components/sections/apropos.jsx'
+import Experiance from './components/sections/experiance.jsx'
+import Certification from './components/sections/certification.jsx'
+import Projet from './components/sections/projet.jsx'
+import Contact from './components/sections/contact.jsx'
+import Bottom from './components/layout/bottom.jsx'
+import './assets/styles/app.css'
 
 export default function App() {
+    const [menuOpen, setMenuOpen] = useState(false)
+    const [active, setActive] = useState('accueil')
 
-    const date = new Date()
-        useEffect(() => {
-        Aos.init({
-        duration: 1000, 
-        once: false,    
-        });
-    }, []);
-    
-    return(<>
-        <Layout />
-        
-        <Head />
-        <Apropos />
-        <div className="px-6 md:px-28 w-full bg-white">
-            <div className="border-b border-gray-300 w-full" />
-        </div>
-        <Skils />
-        <Certification />
-        <Projet />
+    useEffect(() => {
+        const elements = document.querySelectorAll('[data-reveal]')
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target) }
+            }), { threshold: 0.1 })
+            elements.forEach(element => { element.classList.add('reveal-ready'); observer.observe(element) })
+            const sections = new IntersectionObserver(entries => entries.forEach(entry => {
+                if (entry.isIntersecting) setActive(entry.target.id)
+            }), { rootMargin: '-15% 0px -55% 0px' })
+            document.querySelectorAll('main section[id]').forEach(element => sections.observe(element))
+            return () => { observer.disconnect(); sections.disconnect() }
+        }
+    }, [])
 
-        <footer id="Contact" className="px-4 md:px-34 py-12">
+    return <>
+        <a className="fixed top-[-80px] left-3 z-[100] bg-accent p-3 focus:top-3" href="#main">Aller au contenu</a>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 ">
-                <div className="w-full flex items-center flex-col text-center md:border-r md:border-gray-300">
-                    <CiMap size={52} className="text-indigo-600"/>
-                    <h3 className="py-3 text-2xl font-bold">Locatisation</h3>
-                    <p className="text-gray-700">République démocratique du congo <br />
-                        Kinshasa, Lemba</p>
-                </div>
-                <div className="w-full flex items-center flex-col text-center md:border-r md:border-gray-300">
-                    <IoPhonePortraitOutline size={52} className="text-indigo-600"/>
-                    <h3 className="py-3 text-2xl font-bold">Téléphone</h3>
-                    <p className="text-gray-700">+243890395930</p>
-                </div>
-                <div className="w-full flex items-center flex-col text-center">
-                    <MdMailOutline size={52} className="text-indigo-600"/>
-                    <h3 className="py-3 text-2xl font-bold">Mail</h3>
-                    <p className="text-gray-700">benikams03@gmail.com</p>
-                </div>
-            </div>
-            <div className="w-full text-center border-t border-gray-300 mt-10">
-                <p className="text-sm text-gray-600 pt-6">Copyright © {date.getFullYear()} Beni Mukungulu. Tous droits réservés.</p>
-            </div>
-        </footer>
-    </>)
+        <Top active={active} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
+        <main id="main">
+            <Head />
+            <Apropos />
+            <Experiance />
+            <Certification />
+            <Projet />
+            <Contact />
+        </main>
+
+        <Bottom />
+    </>
 }

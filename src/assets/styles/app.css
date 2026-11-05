@@ -1,29 +1,69 @@
 @import "tailwindcss";
+
 @font-face {
     font-family: ElmsSans;
-    src: url(./../font/ElmsSans-VariableFont_wght.ttf);
-}
-body{font-family: ElmsSans;}
-.custom-shape-divider-bottom-1763164533 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+    src: url('../font/ElmsSans-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
 }
 
-.custom-shape-divider-bottom-1763164533 svg {
-    position: relative;
-    display: block;
-    width: calc(109% + 1.3px);
-    height: 64px;
+@theme {
+    --font-sans: ElmsSans, Arial, sans-serif;
+
+    --color-ink: #151515;
+    --color-coal: #151515;
+    --color-paper: #faf9f7;
+    --color-mist: #f4f2ee;
+    --color-sage: #efece6;
+    --color-night: #0c0c0d;
+    --color-accent: #d9653b;
+    --color-accentlight: #e8805a;
+    --color-muted: #6b6b6b;
+    --color-line: #e8e8e6;
+    --color-focus: #d9653b;
+
+    --animate-float: float 7s ease-in-out infinite;
+    --animate-nudge: nudge 2.5s ease-in-out infinite;
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(-5deg); }
+        50% { transform: translateY(-9px) rotate(-3deg); }
+    }
+    @keyframes nudge {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(4px); }
+    }
 }
 
-.custom-shape-divider-bottom-1763164533 .shape-fill{
-    fill: #e0e7ff80;
+::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
 }
-.white .shape-fill{
-    fill: #ffffff;
+
+:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 6px;
+}
+
+[data-reveal].reveal-ready {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.2,.65,.3,1);
+}
+[data-reveal].reveal-ready.visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    [data-reveal].reveal-ready {
+        opacity: 1;
+        transform: none;
+    }
 }
