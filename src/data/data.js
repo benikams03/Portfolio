@@ -32,7 +32,7 @@ const dataprojet = [
         image : '/image-project/tokutan.png',
         titre : 'Tokutana',
         text : "Découvrez notre plateforme complète de gestion d'événements : créez, organisez et gérez facilement tous vos événements professionnels ou personnels en ligne.",
-        type : 'web',
+        type : 'mobile',
         link : 'https://tokutana.vercel.app/'
     },
     // {
@@ -43,6 +43,9 @@ const dataprojet = [
     //     link : ''
     // },
 ]
+
+
+
 
 // Remplacer cet exemple par vos véritables expériences, puis en ajouter au tableau.
 const experiences = [
