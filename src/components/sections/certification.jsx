@@ -6,6 +6,8 @@ import { certificates } from '../../data/certificates.js'
 const container = 'mx-auto w-[min(1200px,calc(100%_-_96px))] max-[1100px]:w-[calc(100%_-_64px)] max-[800px]:w-[calc(100%_-_40px)]'
 const section = 'bg-mist py-[112px] max-[800px]:py-[75px] max-[600px]:py-[62px]'
 const darkLink = 'mt-[18px] inline-flex items-center gap-[13px] border-b border-[#d9d9d9] pb-2.5 text-[13px] font-[560] text-ink [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:translate-x-[3px] hover:[&_svg]:-translate-y-[3px]'
+const certLink = 'mt-[18px] inline-flex items-center gap-[13px] border-b border-[#d9d9d9] pb-2.5 text-xs font-[560] text-ink [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:translate-x-[3px] hover:[&_svg]:-translate-y-[3px] max-[800px]:mt-2.5 max-[600px]:gap-1.5 max-[600px]:text-[11px]'
+const disabledLink = 'mt-[18px] inline-flex cursor-default items-center gap-[13px] border-b border-[#e8e8e6] pb-2.5 text-[13px] font-[560] text-muted'
 const tag = 'rounded border border-[#e8e8e6] bg-[#ffffff45] px-2.5 py-1.5 text-[11px] text-[#6b6b6b] max-[600px]:px-[7px] max-[600px]:py-[5px] max-[600px]:text-[10px]'
 
 export default function Certification() {
@@ -27,7 +29,9 @@ export default function Certification() {
                                 <span className="text-[11px] text-[#6b6b6b]">{item.date}</span>
                                 <h3 className="my-[9px] text-[21px] font-[550]">{item.titre}</h3>
                                 <p className="max-w-[330px] text-[13px] leading-[1.8] text-muted">{item.description}</p>
-                                <a className={darkLink} href={item.documentUrl} target="_blank" rel="noreferrer" aria-label={`Voir le diplôme : ${item.titre}`}>Voir le diplôme <FiArrowUpRight /></a>
+                                {item.documentUrl
+                                    ? <a className={darkLink} href={item.documentUrl} target="_blank" rel="noreferrer" aria-label={`Voir le diplôme : ${item.titre}`}>Voir le diplôme <FiArrowUpRight /></a>
+                                    : <span className={disabledLink}>Voir le diplôme <FiArrowUpRight /></span>}
                             </article>
                         ))}
                     </div>
@@ -50,15 +54,17 @@ export default function Certification() {
                                     <span className="inline-block rounded border border-[#e8e8e6] px-2 py-1 text-[10px] leading-[1.4] text-[#6b6b6b] max-[600px]:text-[8px]">Certificat de démonstration</span>
                                     <h3 className="mt-[17px] text-[22px] leading-[1.2] font-[550] max-[800px]:text-xl max-[600px]:text-xl">{certificate.title}</h3>
                                     <p className="mt-[11px] text-xs leading-[1.8] text-muted max-[600px]:text-[11px]">{certificate.issuer} · {certificate.year}</p>
-                                    <a
-                                        className="mt-[18px] inline-flex items-center gap-[13px] border-b border-[#d9d9d9] pb-2.5 text-xs font-[560] text-ink [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:translate-x-[3px] hover:[&_svg]:-translate-y-[3px] max-[800px]:mt-2.5 max-[600px]:gap-1.5 max-[600px]:text-[11px]"
-                                        href={certificate.documentUrl}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        aria-label={`Voir le certificat : ${certificate.title}`}
-                                    >
-                                        Voir le certificat <FiArrowUpRight />
-                                    </a>
+                                    {certificate.documentUrl
+                                        ? <a
+                                            className={certLink}
+                                            href={certificate.documentUrl}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label={`Voir le certificat : ${certificate.title}`}
+                                        >
+                                            Voir le certificat <FiArrowUpRight />
+                                        </a>
+                                        : <span className={`${disabledLink} text-xs max-[800px]:mt-2.5 max-[600px]:gap-1.5 max-[600px]:text-[11px]`}>Voir le certificat <FiArrowUpRight /></span>}
                                 </div>
                             </article>
                         ))}

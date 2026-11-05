@@ -14,7 +14,7 @@ const certificates = [
         issuer: 'Organisme à renseigner',
         year: '2025 (exemple)',
         // Remplacer par le vrai fichier : '/certificat&diplome/nom-du-fichier.pdf'
-        documentUrl: '/certificat&diplome/exemple.pdf',
+        documentUrl: null,
     },
 ]
 
