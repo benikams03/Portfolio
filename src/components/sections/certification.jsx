@@ -1,6 +1,7 @@
 import { FiArrowUpRight, FiAward } from 'react-icons/fi'
 import SectionTitle from './section-title.jsx'
-import { dataCertification, certificates } from '../../data/data.js'
+import { dataCertification } from '../../data/dataCertification.js'
+import { certificates } from '../../data/certificates.js'
 
 const container = 'mx-auto w-[min(1200px,calc(100%_-_96px))] max-[1100px]:w-[calc(100%_-_64px)] max-[800px]:w-[calc(100%_-_40px)]'
 const section = 'bg-mist py-[112px] max-[800px]:py-[75px] max-[600px]:py-[62px]'

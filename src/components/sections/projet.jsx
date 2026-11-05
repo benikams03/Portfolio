@@ -1,6 +1,6 @@
 import { FiArrowUpRight } from 'react-icons/fi'
 import SectionTitle from './section-title.jsx'
-import { dataprojet } from '../../data/data.js'
+import { dataprojet } from '../../data/dataprojet.js'
 
 const container = 'mx-auto w-[min(1200px,calc(100%_-_96px))] max-[1100px]:w-[calc(100%_-_64px)] max-[800px]:w-[calc(100%_-_40px)]'
 const section = 'bg-sage py-[112px] max-[800px]:py-[75px] max-[600px]:py-[62px]'

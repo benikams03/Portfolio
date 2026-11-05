@@ -1,4 +1,4 @@
-import { skillGroups } from '../../data/data.js'
+import { skillGroups } from '../../data/skillGroups.js'
 
 const eyebrow = 'flex items-center gap-2.5 text-[11px] leading-[1.6] font-[650] tracking-[2px]'
 const tag = 'rounded border border-[#e8e8e6] bg-[#ffffff45] px-2.5 py-1.5 text-[11px] text-[#6b6b6b] max-[600px]:px-[7px] max-[600px]:py-[5px] max-[600px]:text-[10px]'
