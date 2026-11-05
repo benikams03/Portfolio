@@ -3,13 +3,15 @@ const dataCertification = [
         date: '2021',
         titre: 'Baccalauréat',
         description: 'Complexe Scolaire la borne muanda, biologie chimie',
-        documentUrl: null, // Ex. '/diplomes/baccalaureat.pdf' une fois le fichier ajouté dans public/.
+        // Remplacer par le vrai fichier : '/certificat&diplome/nom-du-fichier.pdf'
+        documentUrl: '/certificat&diplome/exemple.pdf',
     },
     {
         date: '2021 - 2025',
         titre: 'Licence en informatique',
         description: 'Université de Kinshasa, Faculté de science département math-info',
-        documentUrl: null,
+        // Remplacer par le vrai fichier : '/certificat&diplome/nom-du-fichier.pdf'
+        documentUrl: '/certificat&diplome/exemple.pdf',
     },
 ]
 
