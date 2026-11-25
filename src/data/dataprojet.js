@@ -1,5 +1,12 @@
 const dataprojet = [
     {
+        image: '/image-project/bongisakisi-cloud.png',
+        titre: 'Bongisakisi Cloud',
+        text: "Solution cloud pour la gestion de votre pharmacie, accessible depuis n'importe quel appareil.",
+        type: 'web',
+        link: 'https://cloud-bongisakisi.vercel.app/',
+    },
+    {
         image: '/image-project/bongisakisi.png',
         titre: 'Bongisakisi',
         text: "Application desktop offline complète pour gérer votre pharmacie : stocks, ventes, produits et rapports. Interface intuitive conçue pour les pharmaciens.",
